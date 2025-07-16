@@ -172,8 +172,7 @@ dataset:- https://www.kaggle.com/datasets/cid007/mental-disorder-classification
 
 ## 👨‍💻 Author
 
-**Mehedi Hasan Mir**  
-Final Year Student  
+**Mehedi Hasan Mir**    
 AI & Data Science Enthusiast  
-GitHub: [your-profile](https://github.com/mehedihasanmir)
+GitHub: [My-profile](https://github.com/mehedihasanmir)
 
