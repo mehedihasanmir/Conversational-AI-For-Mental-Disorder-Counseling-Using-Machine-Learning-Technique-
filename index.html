@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Well-being Assessment</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div id="main-container" class="bg-white rounded-lg shadow-xl p-6 w-full max-w-6xl flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
+
+        <div id="assessment-form-container" class="lg:w-3/4 flex-shrink-0 p-6 rounded-lg bg-blue-50"> 
+            <h2 class="text-2xl font-bold text-indigo-700 mb-6 text-center">Your Well-being Assessment</h2>
+            <form id="symptom-form">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-semibold mb-2">
+                        1. Have you experienced any recent mood swings?
+                    </label>
+                    <div class="flex items-center space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="mood_swing" value="Yes" required>
+                            <span class="ml-2">Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="mood_swing" value="No" checked required>
+                            <span class="ml-2">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="optimism" class="block text-gray-700 text-sm font-semibold mb-2">
+                        2. Rate your optimism level (1-10): <span id="optimism-value" class="font-medium text-indigo-700">5</span>
+                    </label>
+                    <input type="range" id="optimism" name="optimism" min="1" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <div class="mb-4">
+                    <label for="sadness" class="block text-gray-700 text-sm font-semibold mb-2">
+                        3. How often do you feel sadness?
+                    </label>
+                    <select id="sadness" name="sadness" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Usually">Usually</option>
+                        <option value="Seldom">Seldom</option>
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="Most-Often">Most-Often</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="exhausted" class="block text-gray-700 text-sm font-semibold mb-2">
+                        4. How often do you feel exhausted?
+                    </label>
+                    <select id="exhausted" name="exhausted" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Seldom">Seldom</option>
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="Usually">Usually</option>
+                        <option value="Most-Often">Most-Often</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-semibold mb-2">
+                        5. Do you struggle with respecting authority?
+                    </label>
+                    <div class="flex items-center space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="authority_respect" value="Yes" required>
+                            <span class="ml-2">Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="authority_respect" value="No" checked required>
+                            <span class="ml-2">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="euphoric" class="block text-gray-700 text-sm font-semibold mb-2">
+                        6. How often do you feel euphoric?
+                    </label>
+                    <select id="euphoric" name="euphoric" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="Seldom">Seldom</option>
+                        <option value="Usually">Usually</option>
+                        <option value="Most-Often">Most-Often</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-semibold mb-2">
+                        7. Have you had suicidal thoughts?
+                    </label>
+                    <div class="flex items-center space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="suicidal_thoughts" value="Yes" required>
+                            <span class="ml-2">Yes</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio text-indigo-600" name="suicidal_thoughts" value="No" checked required>
+                            <span class="ml-2">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="sleep_disorder" class="block text-gray-700 text-sm font-semibold mb-2">
+                        8. Do you experience sleep disorders?
+                    </label>
+                    <select id="sleep_disorder" name="sleep_disorder" class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="Seldom">Seldom</option>
+                        <option value="Sometimes">Sometimes</option>
+                        <option value="Usually">Usually</option>
+                        <option value="Most-Often">Most-Often</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="sexual_activity" class="block text-gray-700 text-sm font-semibold mb-2">
+                        9. Rate your sexual activity (1-10): <span id="sexual-activity-value" class="font-medium text-indigo-700">5</span>
+                    </label>
+                    <input type="range" id="sexual_activity" name="sexual_activity" min="1" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <div class="mb-6">
+                    <label for="concentration" class="block text-gray-700 text-sm font-semibold mb-2">
+                        10. Rate your concentration level (1-10): <span id="concentration-value" class="font-medium text-indigo-700">2</span>
+                    </label>
+                    <input type="range" id="concentration" name="concentration" min="1" max="10" value="2" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <button type="submit" class="bg-indigo-600 text-white py-2 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                        Get Prediction
+                    </button>
+                    <button type="button" id="skip-form-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        Skip Assessment
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="chat-container" class="lg:w-1/4 flex flex-col bg-gray-50 rounded-lg shadow-inner p-4 relative">
+            <button id="back-to-assessment-button" class="hidden bg-indigo-500 text-white py-2 px-4 rounded-lg mb-4 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                &larr; Back to Assessment
+            </button>
+            
+            <div id="chat-history" class="flex-grow overflow-y-auto pr-2 mb-4 space-y-3 h-[35vh] min-h-[35vh]"> 
+                <div class="flex justify-start">
+                    <div class="p-3 rounded-lg max-w-[80%] shadow-sm bg-gray-200 text-gray-800 bot-message">
+                        Hello! I'm MindConnect AI. Please answer the questions on the left or skip them to start chatting with me. I'm here to support you.
+                    </div>
+                </div>
+                </div>
+
+            <div id="loading-indicator" class="hidden text-center text-gray-500 mb-2">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mx-auto"></div>
+                Thinking...
+            </div>
+
+            <div id="prediction-result" class="hidden p-3 rounded-lg text-center text-sm font-medium mb-3">
+                </div>
+
+            <div class="flex items-center border-t border-gray-200 pt-4">
+                <input
+                    type="text"
+                    id="user-input"
+                    class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mr-2"
+                    placeholder="Type your message..."
+                    disabled
+                >
+                <button
+                    id="send-button"
+                    class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                    disabled
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Custom Styles for Well-being Assessment and Chatbot */
+
+/* Body Background */
+body {
+    /* Using a very light off-white or a cool gray for a clean, formal look */
+    background-color: #F8F9FA; /* A very light gray */
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Main Container (the card holding both sections) */
+/* Tailwind already applies shadow-xl, rounded-lg, bg-white */
+/* No changes needed here, as it's already a good base. */
+
+/* Left Column: Assessment Form */
+#assessment-form-container {
+    /* Subtle background for the form area */
+    background-color: #E8F0FE; /* A very light blue for a gentle touch */
+    border: 1px solid #C0D3EB; /* A slightly darker blue border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+/* Form Headings */
+#assessment-form-container h2 {
+    color: #2C3E50; /* Darker blue for headings */
+    border-bottom: 2px solid #5C6BC0; /* A slightly deeper blue underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Labels for form questions */
+.block.text-gray-700.text-sm.font-semibold.mb-2 {
+    color: #34495E; /* Dark gray for text, good contrast */
+}
+
+/* Form input elements (radio, select, range) */
+/* Tailwind handles much of this, but we can refine colors */
+input[type="radio"].form-radio:checked {
+    border-color: #5C6BC0; /* Match the accent blue */
+    background-color: #5C6BC0;
+}
+
+/* Select dropdowns */
+select {
+    border-color: #BDC3C7; /* Light gray border */
+    color: #34495E; /* Dark text for readability */
+}
+select:focus {
+    border-color: #5C6BC0; /* Accent blue on focus */
+    box-shadow: 0 0 0 1px #5C6BC0; /* Thin focus ring */
+}
+
+/* Range sliders - These are harder to style consistently across browsers with plain CSS.
+   Tailwind's utility classes already provide a decent look.
+   You might need vendor prefixes or more complex CSS for full customisation. */
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #5C6BC0; /* Accent blue for the thumb */
+}
+input[type="range"]::-moz-range-thumb {
+    background-color: #5C6BC0; /* Accent blue for the thumb */
+}
+
+/* Form Buttons */
+button[type="submit"] {
+    background-color: #5C6BC0; /* Accent blue */
+    /* Tailwind handles text-white, py-2, px-6, rounded-lg */
+}
+button[type="submit"]:hover {
+    background-color: #4857A1; /* Slightly darker accent blue on hover */
+}
+
+#skip-form-button {
+    color: #5C6BC0; /* Accent blue for text button */
+}
+#skip-form-button:hover {
+    color: #4857A1; /* Slightly darker accent blue on hover */
+}
+
+
+/* Right Column: Chatbot Interface */
+#chat-container {
+    background-color: #FDFEFE; /* Very light, almost white background for chat */
+    border: 1px solid #D5DBDB; /* Subtle light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+/* Back to Assessment Button */
+#back-to-assessment-button {
+    background-color: #7F8C8D; /* Muted gray for a secondary action */
+}
+#back-to-assessment-button:hover {
+    background-color: #6C7A7B; /* Slightly darker gray on hover */
+}
+
+/* Chat Messages */
+/* Bot messages */
+.bot-message {
+    background-color: #EBF2F7; /* Light blue-gray for bot messages */
+    color: #34495E; /* Dark text for readability */
+}
+/* User messages (Tailwind already sets bg-blue-500 for user, which is fine) */
+.user-message { /* This class is not directly used in JS, but keeping for reference */
+    background-color: #5C6BC0; /* Keep the accent blue for user messages */
+    color: #FFFFFF;
+}
+
+/* Code Blocks within chat messages */
+.bot-message pre {
+    background-color: #F4F6F7; /* Slightly different background for code blocks */
+    border: 1px solid #D8DEE4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.875rem; /* Smaller font for code */
+    color: #2C3E50;
+}
+
+/* Inline code within chat messages */
+.bot-message code {
+    background-color: #E2E4E8;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.875rem;
+    color: #2C3E50;
+}
+
+
+/* Loading Indicator */
+#loading-indicator .loader {
+    border-top-color: #5C6BC0; /* Accent blue for the spinner */
+}
+#loading-indicator {
+    color: #5C6BC0; /* Accent blue for "Thinking..." text */
+}
+
+/* Prediction Result Display */
+#prediction-result.bg-green-100 {
+    background-color: #D4EDDA; /* Muted green for success */
+    color: #155724; /* Dark green text */
+    border: 1px solid #C3E6CB;
+}
+#prediction-result.bg-red-100 {
+    background-color: #F8D7DA; /* Muted red for error */
+    color: #721C24; /* Dark red text */
+    border: 1px solid #F5C6CB;
+}
+
+/* User Input Area */
+input[type="text"]#user-input {
+    border-color: #BDC3C7; /* Light gray border */
+    color: #34495E; /* Dark text */
+}
+input[type="text"]#user-input:focus {
+    border-color: #5C6BC0; /* Accent blue on focus */
+    box-shadow: 0 0 0 1px #5C6BC0; /* Thin focus ring */
+}
+
+#send-button {
+    background-color: #5C6BC0; /* Accent blue */
+}
+#send-button:hover {
+    background-color: #4857A1; /* Darker accent blue on hover */
+}
