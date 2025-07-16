@@ -7,9 +7,9 @@ This project integrates **machine learning**, **explainable AI **, and **convers
 
 ## 🔗 Project Demo
 
-![Well-being Assessment Form](./path/to/Screenshot%202025-07-16%20161633.png)
-![Prediction Result](./path/to/Screenshot%202025-07-16%20161654.png)
-![Chatbot Welcome Screen](./path/to/Screenshot%202025-07-16%20161715.png)
+![Well-being Assessment Form](./photo/Home%20Page.png)
+![Prediction Result](./photo/prediction.png)
+![Chatbot Welcome Screen after Skip Question](./photo/Ahter%20skiping%20Question.png)
 
 ---
 
